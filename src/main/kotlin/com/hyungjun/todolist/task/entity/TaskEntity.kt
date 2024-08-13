@@ -11,7 +11,7 @@ import java.time.LocalDateTime
 @Table(name = "Tasks")
 data class TaskEntity(
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-	val id: Int = 0,
+	val id: Long = 0,
 
 	@ManyToOne
 	@JoinColumn(name = "user_id", nullable = false)
@@ -26,7 +26,7 @@ data class TaskEntity(
 	val taskStatus: TaskStatusEntity,
 
 	@Column(unique = true, nullable = false)
-	val taskKey: Int,
+	val taskKey: String,
 
 	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)

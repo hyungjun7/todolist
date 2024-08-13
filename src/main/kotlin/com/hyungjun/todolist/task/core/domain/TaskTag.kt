@@ -1,7 +1,7 @@
 package com.hyungjun.todolist.task.core.domain
 
 class TaskTag(
-	val id: Int = 0,
-	val taskId: Int,
-	val tagId: Int
+	val id: Long = 0,
+	val taskId: Long,
+	val tagId: Long
 )

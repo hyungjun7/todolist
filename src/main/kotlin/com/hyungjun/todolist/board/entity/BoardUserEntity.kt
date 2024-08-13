@@ -9,7 +9,7 @@ import java.time.LocalDateTime
 @Table(name = "BoardUsers")
 data class BoardUserEntity(
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-	val id: Int = 0,
+	val id: Long = 0,
 
 	@ManyToOne
 	@JoinColumn(name = "user_id", nullable = false)

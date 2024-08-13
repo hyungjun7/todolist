@@ -7,7 +7,7 @@ import java.time.LocalDateTime
 @Table(name = "Histories")
 data class HistoryEntity(
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-	val id: Int = 0,
+	val id: Long = 0,
 
 	@Column(nullable = false, length = 100)
 	val type: String,

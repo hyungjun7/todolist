@@ -7,7 +7,7 @@ import java.time.LocalDateTime
 @Table(name = "TaskStatuses")
 data class TaskStatusEntity(
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-	val id: Int = 0,
+	val id: Long = 0,
 
 	@ManyToOne
 	@JoinColumn(name = "board_id", nullable = false)

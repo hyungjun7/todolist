@@ -7,7 +7,7 @@ import java.time.LocalDateTime
 @Table(name = "Boards")
 data class BoardEntity(
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-	val id: Int = 0,
+	val id: Long = 0,
 
 	@Column(unique = true, nullable = false, length = 36)
 	val boardKey: String,

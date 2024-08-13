@@ -8,7 +8,7 @@ import java.time.LocalDateTime
 @Table(name = "Users")
 data class UserEntity(
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-	val id: Int = 0,
+	val id: Long = 0,
 
 	@Column(unique = true, nullable = false, length = 36)
 	val uniqueKey: String,

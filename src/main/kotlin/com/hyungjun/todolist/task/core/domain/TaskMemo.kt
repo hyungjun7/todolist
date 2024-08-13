@@ -1,8 +1,8 @@
 package com.hyungjun.todolist.task.core.domain
 
 class TaskMemo(
-	val id: Int = 0,
-	val userId: Int,
-	val taskId: Int,
+	val id: Long = 0,
+	val userId: Long,
+	val taskId: Long,
 	var memo: String
 )
