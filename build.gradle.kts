@@ -1,9 +1,10 @@
 plugins {
-	kotlin("jvm") version "1.9.24"
-	kotlin("plugin.spring") version "1.9.24"
 	id("org.springframework.boot") version "3.3.2"
 	id("io.spring.dependency-management") version "1.1.6"
+	kotlin("jvm") version "1.9.24"
+	kotlin("plugin.spring") version "1.9.24"
 	kotlin("plugin.jpa") version "1.9.24"
+	kotlin("kapt") version "1.9.24"
 }
 
 group = "com.hyungjun"
@@ -22,6 +23,11 @@ repositories {
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
+	implementation("org.xerial:sqlite-jdbc:3.36.0.3")
+	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.hibernate.orm:hibernate-community-dialects")
+	implementation("org.mapstruct:mapstruct:1.5.3.Final")
+	kapt("org.mapstruct:mapstruct-processor:1.5.3.Final")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
