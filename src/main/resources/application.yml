@@ -2,10 +2,10 @@ spring:
   application:
     name: todolist
   datasource:
-    url: jdbc:sqlite:todolist.db
+    url: jdbc:sqlite:file::memory:?cache=shared
     driver-class-name: org.sqlite.JDBC
   jpa:
     database-platform: org.hibernate.community.dialect.SQLiteDialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     show-sql: true
