@@ -8,7 +8,7 @@ import java.time.LocalDateTime
 @Table(name = "Users")
 data class UserEntity(
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-	val id: Long = 0,
+	val id: Long? = 0,
 
 	@Column(unique = true, nullable = false, length = 36)
 	val uniqueKey: String,
@@ -27,11 +27,11 @@ data class UserEntity(
 	val role: UserRole = UserRole.USER,
 
 	@Column(nullable = false)
-	val updatedAt: LocalDateTime = LocalDateTime.now(),
+	val updatedAt: LocalDateTime? = LocalDateTime.now(),
 
 	@Column
 	val deletedAt: LocalDateTime? = null,
 
 	@Column(nullable = false)
-	val createdAt: LocalDateTime = LocalDateTime.now()
+	val createdAt: LocalDateTime? = LocalDateTime.now()
 )

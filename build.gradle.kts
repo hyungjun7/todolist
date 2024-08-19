@@ -25,12 +25,18 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.xerial:sqlite-jdbc:3.36.0.3")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-validation")
 	implementation("org.hibernate.orm:hibernate-community-dialects")
+	implementation("org.mindrot:jbcrypt:0.4")
 	implementation("org.mapstruct:mapstruct:1.5.3.Final")
 	kapt("org.mapstruct:mapstruct-processor:1.5.3.Final")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
-	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+	testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
+	testImplementation("org.mockito:mockito-core:3.12.4")
+	testImplementation("org.mockito:mockito-junit-jupiter:3.12.4")
+	testImplementation("org.mockito.kotlin:mockito-kotlin:3.2.0")
+	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
 }
 
 kotlin {
